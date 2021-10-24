@@ -30,6 +30,7 @@ const InfoSection = ({
 }) => {
     return (
         <>
+        {/* Structure of InfoSection START */}
           <InfoSec lightBg={lightBg}>
               <Container>
                     <InfoRow imgStart={imgStart}>
@@ -53,6 +54,7 @@ const InfoSection = ({
                     </InfoRow>
               </Container>
           </InfoSec>  
+          {/* Structure of InfoSection END */}
         </>
     )
 }
