@@ -6,9 +6,12 @@ import  Services  from  './pages/Services/Services';
 import  Products  from  './pages/Products/Products';
 import  AboutUs from  './pages/About Us/AboutUs';
 import  ContactUs from  './pages/Contact Us/ContactUs';
+import { useState } from 'react';
+import SignUp from './pages/Signup/SignUp';
 
 
 function App() {
+
   return (
     <Router>
       <GlobalStyle />
@@ -20,11 +23,15 @@ function App() {
         <Route  path  = "/products" exact component={Products} />
         <Route  path  = "/about-us" exact component={AboutUs} />
         <Route  path  = "/contact-us"  exact component={ContactUs} />
+        <Route  path  = "/sign-up"  exact component={SignUp} />
         {/* Routing END */}
       </Switch>
       <Footer />
+
+      
     </Router>
   );
 }
+
 
 export default App;
