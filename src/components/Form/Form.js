@@ -2,24 +2,25 @@ import  React   from    'react';
 
 // Imports for Form.element.js
 import  {   Button  }   from    '../../globalStyles';
+import { NavBtnLink } from '../Navbar/Navbar.elements';
 import  {
     FormContainer,
     FormSubscription,
     FormSubHeading,
-    FormSubText,
-    Form2,
     FormInput,
+    FormBtnLink
 }   from    './Form.elements';
 
-const   Form    =   ()  =>  {
+const Form = () => {
     return  (
+     <>
         <FormContainer>
             <FormSubscription>
             <FormSubHeading>
-                SignUp to continue.
+                Sign Up
             </FormSubHeading>
 
-            <form>
+            <form to='/form'>
 
                 {/* Name */}
                 <FormInput  name="name" type="text" placeholder="Your Name" />
@@ -33,13 +34,14 @@ const   Form    =   ()  =>  {
                 <FormInput  name="Email" type="text" placeholder="Email" />
 
                 {/* Submit */}
-                <Button fontBig>Submit</Button>
-                <Button fontBig>Cancel</Button>
+                <FormBtnLink><Button>Submit</Button></FormBtnLink>
             </form>
 
                 
             </FormSubscription>
         </FormContainer>
+        
+      </>
     );
 }
 

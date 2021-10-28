@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link} from 'react-router-dom';
 import { Container, Button } from '../../globalStyles';
+import { useState } from 'react';
 import {
     InfoSec,
     InfoRow,
@@ -13,6 +14,7 @@ import {
     Img
 } from './InfoSection.elements';
 
+
 const InfoSection = ({
     primary,
     lightBg,
@@ -21,13 +23,19 @@ const InfoSection = ({
     lightTextDesc,
     buttonLabel,
     description,
-    headline,
     lightText,
     topLine,
     img,
     alt,
     start
 }) => {
+
+const [headline, setHeading] = useState('Lead Generation Specialist for Online Business');
+ 
+function updateHeading() {
+     setHeading('Successfull Lead Generation Specialist for Online Business');
+ }
+
     return (
         <>
         {/* Structure of InfoSection START */}
@@ -39,8 +47,8 @@ const InfoSection = ({
                                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                                <Heading lightText={lightText}>{headline}</Heading>
                                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                               <Link to='/sign-up'>
-                                   <Button big fontBig primary={primary}>
+                               <Link to='/'>
+                                   <Button big fontBig primary={primary} onClick={updateHeading}>
                                        {buttonLabel}
                                    </Button>
                                </Link>

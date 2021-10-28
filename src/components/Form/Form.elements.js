@@ -5,44 +5,27 @@ import  {   Link    }   from    'react-router-dom';
 
 export  const   FormContainer =   styled.div  `
 background-color    :   #101522;
-padding :   4rem    0   2rem    0;
 display :   flex;
-flex-direction  :   column;
 justify-content :   center;
 align-items :   center;
+flex-direction: column;
 `;
 
 export  const   FormSubscription  =   styled.section  `
 display :   flex;
-flex-direction  :   column;
 justify-content :   center;
 align-items :   center;
 text-align  :   center;
-margin-bottom   :   24px;
 padding :   24px;
 color   :   #fff;
+background-color: #4b59f7;
+flex-direction: column;
 `;
 
 export const    FormSubHeading  =   styled.p`
 font-family :   'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans' Arial, sans-serif;
 margin-bottom   :   24px;
 font-size   :   24px;
-`;
-
-export  const   FormSubText =   styled.p`
-margin-bottom   :   24px;
-font-size   :   20px;
-`;
-
-export  const   Form2    =   styled.form`
-display :   flex;
-justify-content :   center;
-align-items :   center;
-
-@media screen and(max-width :   820px)  {
-    flex-direction  :   column;
-    width   :   80%;
-}
 `;
 
 export  const   FormInput   =   styled.input`
@@ -53,6 +36,10 @@ outline :   none;
 border  :   none;
 font-size   :   16px;
 border  :   1px solid   #fff;
+display: block;
+min-width: 350px;
+margin: 10px;
+margin-bottom: 20px;
 
 &::placeholder  {
     color   :   #242424;
@@ -62,4 +49,12 @@ border  :   1px solid   #fff;
     width   :   100%;
     margin  :   0   0   16px    0;
 }
+`;
+export const FormBtnLink = styled.button`
+display: flex;
+margin: 10px;
+justify-content: flex-start;
+border: none;
+border-radius: 5px;
+background-color: #101522;
 `;

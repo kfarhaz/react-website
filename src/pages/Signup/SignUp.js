@@ -8,7 +8,7 @@ import Form from '../../components/Form/Form';
 const   SignUp    =   ()  =>  {
     return  (
         <>
-        <Form   />
+        <Form />
         </>
     )
 }

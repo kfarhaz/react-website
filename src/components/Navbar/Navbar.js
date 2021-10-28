@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext} from 'react-icons/lib';
+import { useHistory } from 'react-router';
 import { Button } from '../../globalStyles';
+import CustomizedDialogs from '../../pages/Dialog/Dialog';
 import {
     Nav,
     NavbarContainer,
@@ -12,13 +14,16 @@ import {
     NavItem,
     NavLinks,
     NavBtnLink,
-    NavItemBtn
+    NavItemBtn,
 } from './Navbar.elements';
 
 
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
+    const history = useHistory();
+    const [textclick, setTextClick] = useState(true);
+
 
     const handleClick = () => setClick(!click);
 
@@ -28,7 +33,8 @@ const Navbar = () => {
         } else{
             setButton(true)
         }
-    }
+    };
+
 
     useEffect(() =>{
         showButton()
@@ -66,13 +72,13 @@ const Navbar = () => {
                     </NavItem>
                     <NavItemBtn>
                         {button ? (
-                            <NavBtnLink to="/sign-up">
-                                <Button primary>SIGN UP</Button>
+                            <NavBtnLink to="/">
+                                <CustomizedDialogs />
                             </NavBtnLink>
                         ) : (
-                            <NavBtnLink to="/sign-up">
-                                <Button fontBig primary>
-                                    SIGN UP
+                            <NavBtnLink to="/">
+                                <Button primary>
+                                    
                                 </Button>
                             </NavBtnLink>
                         )}
